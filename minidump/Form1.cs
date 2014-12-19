@@ -15,5 +15,12 @@ namespace minidump
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int a = 1;
+            int b = 0;
+            int c = a / b;
+        }
     }
 }
