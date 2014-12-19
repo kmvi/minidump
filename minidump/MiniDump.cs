@@ -69,6 +69,7 @@ namespace minidump
             };
 
             using (var fs = new FileStream(fileName, FileMode.Create)) {
+                // MINIDUMP_TYPE.MiniDumpWithFullMemory gives more info, but dump file size will be very large
                 MiniDumpWriteDump(proc.Handle, (uint)proc.Id, fs.SafeFileHandle.DangerousGetHandle(),
                     (int)MINIDUMP_TYPE.MiniDumpNormal, ref info, IntPtr.Zero, IntPtr.Zero);
             }
